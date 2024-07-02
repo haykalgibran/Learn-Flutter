@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/flutter_svg.dart'; // Removed redundant import
 import 'package:belajar1/theme.dart';
-import 'package:belajar1/models/datas/icons.dart';
+import 'package:belajar1/models/datas/icons.dart'; // Ensure this file exists and path is correct
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -75,7 +74,7 @@ class HomePage extends StatelessWidget {
                       child: Row(
                         children: [
                           SvgPicture.asset(
-                            'assets/icons/search.svg',
+                            'assets/icons/search.svg', // Ensure the SVG file exists
                             colorFilter:
                                 ColorFilter.mode(dark1, BlendMode.srcIn),
                             width: 20,
@@ -103,7 +102,8 @@ class HomePage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(35 / 2),
                           ),
                           clipBehavior: Clip.hardEdge,
-                          child: Image.asset('assets/images/avatar.png'),
+                          child: Image.asset(
+                              'assets/images/avatar.png'), // Ensure the image file exists
                         ),
                         Positioned(
                           right: 0,
@@ -116,7 +116,8 @@ class HomePage extends StatelessWidget {
                               color: const Color(0xFFD1E7EE),
                             ),
                             clipBehavior: Clip.hardEdge,
-                            child: SvgPicture.asset('assets/icons/goclub.svg'),
+                            child: SvgPicture.asset(
+                                'assets/icons/goclub.svg'), // Ensure the SVG file exists
                           ),
                         ),
                       ],
@@ -190,10 +191,8 @@ class HomePage extends StatelessWidget {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Image.asset(
-                                  'assets/images/gopay.png',
-                                  height: 14,
-                                ),
+                                Image.asset('assets/images/gopay.png',
+                                    height: 14), // Ensure the image file exists
                                 const SizedBox(height: 4),
                                 Flexible(
                                   child: Text(
@@ -229,7 +228,7 @@ class HomePage extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(8),
                               ),
                               child: SvgPicture.asset(
-                                'assets/icons/${icon.icon}.svg',
+                                'assets/icons/${icon.icon}.svg', // Ensure the SVG file exists and icon.icon is valid
                                 color: blue1,
                               ),
                             ),
@@ -269,7 +268,7 @@ class HomePage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: SvgPicture.asset(
-                            'assets/icons/${icon.icon}.svg',
+                            'assets/icons/${icon.icon}.svg', // Ensure the SVG file exists and icon.icon is valid
                             color: icon.icon == 'goclub'
                                 ? icon.color
                                 : icon.icon == 'other'
@@ -278,9 +277,7 @@ class HomePage extends StatelessWidget {
                             width: 24,
                           ),
                         ),
-                        const SizedBox(
-                          height: 9,
-                        ),
+                        const SizedBox(height: 9),
                         Text(
                           icon.title,
                           style: regular12_5.copyWith(color: dark2),
@@ -314,7 +311,8 @@ class HomePage extends StatelessWidget {
                       left: 8,
                       top: 4,
                       bottom: 4,
-                      child: SvgPicture.asset('assets/icons/dots.svg'),
+                      child: SvgPicture.asset(
+                          'assets/icons/dots.svg'), // Ensure the SVG file exists
                     ),
                     Container(
                       padding: const EdgeInsets.symmetric(
@@ -322,10 +320,8 @@ class HomePage extends StatelessWidget {
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          SvgPicture.asset(
-                            'assets/icons/star.svg',
-                            height: 40,
-                          ),
+                          SvgPicture.asset('assets/icons/star.svg',
+                              height: 40), // Ensure the SVG file exists
                           const SizedBox(width: 16),
                           Flexible(
                             fit: FlexFit.tight,
@@ -354,7 +350,7 @@ class HomePage extends StatelessWidget {
                           ),
                           const SizedBox(width: 24),
                           SvgPicture.asset(
-                            'assets/icons/left.svg',
+                            'assets/icons/left.svg', // Ensure the SVG file exists
                             height: 24,
                             colorFilter:
                                 ColorFilter.mode(dark1, BlendMode.srcIn),
@@ -401,7 +397,7 @@ class HomePage extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(20),
                                   ),
                                   child: SvgPicture.asset(
-                                    'assets/icons/goride.svg',
+                                    'assets/icons/goride.svg', // Ensure the SVG file exists
                                     color: Colors.white,
                                     width: 24,
                                   ),
@@ -414,11 +410,9 @@ class HomePage extends StatelessWidget {
                                     style: regular14.copyWith(color: dark1),
                                   ),
                                 ),
-                                const SizedBox(
-                                  width: 24,
-                                ),
+                                const SizedBox(width: 24),
                                 SvgPicture.asset(
-                                  'assets/icons/left.svg',
+                                  'assets/icons/left.svg', // Ensure the SVG file exists
                                   height: 24,
                                   color: dark1,
                                 )

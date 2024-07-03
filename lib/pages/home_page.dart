@@ -1,3 +1,4 @@
+import 'package:belajar1/models/datas/news.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart'; // Removed redundant import
 import 'package:belajar1/theme.dart';
@@ -454,7 +455,47 @@ class HomePage extends StatelessWidget {
                   )
                 ],
               ),
-            )
+            ),
+
+            const SizedBox(
+              height: 24,
+            ),
+            //news
+
+            ...news.map((item) => Padding(
+                  padding:
+                      const EdgeInsets.only(bottom: 24, left: 16, right: 16),
+                  child: Container(
+                    clipBehavior: Clip.hardEdge,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        border: Border.all(color: dark4)),
+                    child: Column(
+                      children: [
+                        Image.asset('assets/images/${item.image}'),
+                        Padding(
+                          padding: const EdgeInsets.all(24),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                item.title,
+                                style: bold16.copyWith(color: dark1),
+                              ),
+                              const SizedBox(
+                                height: 16,
+                              ),
+                              Text(
+                                item.description,
+                                style: regular14.copyWith(color: dark2),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                )),
           ],
         ),
       ),

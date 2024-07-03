@@ -255,6 +255,7 @@ class HomePage extends StatelessWidget {
                   crossAxisCount: 4,
                   mainAxisSpacing: 2,
                   shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
                   children: menuIcons.map((icon) {
                     return Column(
                       children: [
@@ -426,6 +427,34 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
+
+            // GopayLater
+            Padding(
+              padding: const EdgeInsets.only(left: 20, right: 20, top: 32),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.asset(
+                    'assets/images/gopaylater.png',
+                    height: 14,
+                  ),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  Text(
+                    'Lebih hemat pake GoPayLater 🤩',
+                    style: bold16.copyWith(color: dark1),
+                  ),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  Text(
+                    'Yuk, belanja di Tokopedia pake GoPay Later dan nikmatin cashback-nya~',
+                    style: regular14.copyWith(color: dark2),
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),
